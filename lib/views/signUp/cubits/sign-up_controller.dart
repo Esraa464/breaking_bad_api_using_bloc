@@ -1,10 +1,15 @@
 import 'dart:convert';
 import 'package:breaking_bad_api/views/signUp/states/sign_up_states.dart';
 import 'package:dio/dio.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class SignUpController extends Cubit<SignUpStates> {
   SignUpController() : super(SignUpInitial());
+  final SignUpController signUpController = SignUpController();
+  final formKey = GlobalKey<FormState>();
+  final TextEditingController emailController = TextEditingController();
+  final TextEditingController passwordController = TextEditingController();
 
   SignUpController of(context) => BlocProvider.of(context);
 

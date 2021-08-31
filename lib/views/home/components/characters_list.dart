@@ -1,6 +1,6 @@
-import 'package:breaking_bad_api/views/homeView/cubits/home_controller.dart';
-import 'package:breaking_bad_api/views/homeView/states/home_states.dart';
-import 'package:breaking_bad_api/views/homeView/widget/characters_card.dart';
+import 'package:breaking_bad_api/views/home/cubits/home_controller.dart';
+import 'package:breaking_bad_api/views/home/states/home_states.dart';
+import 'package:breaking_bad_api/views/home/widget/characters_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

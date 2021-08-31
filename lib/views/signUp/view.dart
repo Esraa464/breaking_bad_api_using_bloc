@@ -13,7 +13,9 @@ class _RegisterScreenState extends State<SignUp> {
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (context) => SignUpController(),
-      child: Scaffold(appBar: AppBar(), body: SignUpList()),
+      child: Scaffold(
+          appBar: AppBar(title: Text('Sign Up With Email')),
+          body: SignUpList()),
     );
   }
 }

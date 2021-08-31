@@ -1,5 +1,5 @@
-import 'package:breaking_bad_api/views/homeView/models/home_model.dart';
-import 'package:breaking_bad_api/views/homeView/states/home_states.dart';
+import 'package:breaking_bad_api/views/home/models/home_model.dart';
+import 'package:breaking_bad_api/views/home/states/home_states.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

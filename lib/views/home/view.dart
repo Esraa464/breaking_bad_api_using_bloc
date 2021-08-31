@@ -1,8 +1,9 @@
-import 'package:breaking_bad_api/views/homeView/components/appBar.dart';
-import 'package:breaking_bad_api/views/homeView/components/characters_list.dart';
-import 'package:breaking_bad_api/views/homeView/cubits/home_controller.dart';
+import 'package:breaking_bad_api/views/home/cubits/home_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
+import 'components/appBar.dart';
+import 'components/characters_list.dart';
 
 class HomeView extends StatelessWidget {
   @override
