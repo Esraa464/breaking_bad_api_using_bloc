@@ -7,13 +7,13 @@ class TimerCubit extends Cubit<TimerStates> {
   TimerCubit() : super(TimerCount());
 
   static TimerCubit of(context) => BlocProvider.of(context);
-  int counter = 2;
+  int counter = 9;
 
-  // int _baseCounter = 0;
-  Timer _timer;
+  // // int _baseCounter = 0;
+   Timer _timer;
 
   void count() {
-    counter = 2;
+    counter = 9;
     // counter += _baseCounter;
     // _baseCounter += counter;
     emit(TimerCount());

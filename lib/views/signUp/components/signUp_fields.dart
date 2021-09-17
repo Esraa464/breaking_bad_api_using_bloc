@@ -6,7 +6,7 @@ class SignUpFields extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    SignUpController _signUpController=SignUpController().of(context);
+    final _signUpController=SignUpController.of(context);
     return
       Form(
         key: _signUpController.formKey,

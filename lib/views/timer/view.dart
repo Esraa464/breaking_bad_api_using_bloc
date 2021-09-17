@@ -20,7 +20,7 @@ class TimerView extends StatelessWidget {
                   child: Text('Resend code!'),
                   onPressed: controller.count,
                 );
-              return Text('00:' + controller.counter.toString().padLeft(2,'0'));
+              return Text('00:' + controller.counter.toString().padLeft(2,'Ahed'));
 
             },
           ),

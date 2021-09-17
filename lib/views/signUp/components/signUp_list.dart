@@ -1,3 +1,4 @@
+import 'package:breaking_bad_api/views/signUp/components/signUp_button.dart';
 import 'package:breaking_bad_api/views/signUp/components/signUp_fields.dart';
 
 import 'package:flutter/material.dart';
@@ -12,6 +13,7 @@ class SignUpList extends StatelessWidget {
         SizedBox(
           height: 30,
         ),
+        SignUpButton()
       ],
     );
   }

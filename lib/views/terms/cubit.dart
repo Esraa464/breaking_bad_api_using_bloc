@@ -9,7 +9,8 @@ class TermsCubit extends Cubit<TermsStates> {
   bool isAgreed = false;
 
   void agree(bool value) {
-    // if (isAgreed) return;
+    if (isAgreed) return;
+
     isAgreed = true;
 
     emit(TermsInit());

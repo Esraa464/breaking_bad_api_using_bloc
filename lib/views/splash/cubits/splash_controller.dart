@@ -20,13 +20,13 @@ class SplashController extends Cubit <SplashStates>{
 
   }
 
-  TextEditingController _controller = TextEditingController();
-
-  @override
-  Future<void> close() {
-    print('Closed!');
-    _controller.dispose();
-    return super.close();
-  }
+  // TextEditingController _controller = TextEditingController();
+  //
+  // @override
+  // Future<void> close() {
+  //   print('Closed!');
+  //   _controller.dispose();
+  //   return super.close();
+  // }
 
 }

@@ -7,7 +7,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 class SignUpButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final SignUpController signUpController = SignUpController();
+    final signUpController = SignUpController.of(context);
     return BlocBuilder(
       bloc: signUpController,
       builder: (context, state) => state is SignUpLoading

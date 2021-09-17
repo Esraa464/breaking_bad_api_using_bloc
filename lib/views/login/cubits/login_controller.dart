@@ -6,11 +6,22 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class LoginController extends Cubit<LoginStates> {
+
+
   String idToken;
   final formKey = GlobalKey<FormState>();
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
   LoginController() : super(LoginInitial());
+
+  @override
+  Future<void> close() {
+    emailController.dispose();
+    passwordController.dispose();
+    // asvasvavvsa
+    // print('cancel order');
+    return super.close();
+  }
 
   static LoginController of(context) => BlocProvider.of(context);
 
@@ -23,6 +34,7 @@ class LoginController extends Cubit<LoginStates> {
         options: Options(validateStatus: (status) {
       return status < 500;
     }));
+    try{
     final data = response.data as Map;
     if (data.containsKey('idToken')) {
       idToken = data['idToken'];
@@ -32,14 +44,31 @@ class LoginController extends Cubit<LoginStates> {
     } else
       emit(LoginInitial());
     return '>>>>error>>>>';
-  }
+  }catch(e,s){
+      print(e);
+      print(s);
 
-  @override
-  Future<void> close() {
-    // TODO: implement close
-    return super.close();
-  }
+    }
 
+
+
+
+
+    // @override
+    // Future<void> closePasswordController() {
+    //   print('Closed!');
+    //   emailController.dispose();
+    //   return super.close();
+    // }
+    // @override
+    // Future<void> closeEmailController() {
+    //   print('Closed!');
+    //   passwordController.dispose();
+    //   return super.close();
+    // }
+
+
+  }
   void logout() async {
     final prefs = await SharedPreferences.getInstance();
     prefs.remove('idToken');
